@@ -63,12 +63,12 @@ vars:
   iptables_sha512: 71e6ed2260859157d61981a4fe5039dc9e8d7da885a626a4b5dae8164c509a9d9f874286b9468bb6a462d6e259d4d32d5967777ecefdd8a293011ae80c00f153
 
   # renovate: datasource=git-refs versioning=git depName=https://github.com/ipxe/ipxe.git
-  ipxe_ref: 748cab7745186ec6c770fb4d47b0e8c9f213e6df
+  ipxe_ref: 301644ab480ab9787c617e1a94e19ca5c2774072
   ipxe_sha256: 230bbe9c6ce42295fa514b99e0fcb4066bfe783051ff418456fc554b6c6b6507
   ipxe_sha512: 001c10a81ca232f3656930ad8476ce3d1dbf117c49f45f84ba0a4f58668239d0cf0ab6a510955ac77b3e608cbf96367194ab3fc58a9efe3f8f3c9b5d12fb8348
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-  linux_version: 6.6.47
+  linux_version: 6.6.48
   linux_sha256: d43376c9e9eaa92bb1b926054bd160d329c58a62d64bd65fe1222c11c6564f50
   linux_sha512: 9a3c52f5df4480a61493ca24d25c9e9b5b9dfe2e465ecf7d457bc240abf88b2d08d745b63895c6b47a557fca610882bbc8b5fe66b2d7a9262f548daca50d4004
 
@@ -119,7 +119,7 @@ vars:
   linux_firmware_sha512: d7067f38d6a0b59042438cb147f16b71e2334e46bfdc9fba58131a215b834dce07c8e808debf878f2eae28690a51121ba0b6b0f3734b0de0113c1b4ef6ccd9a9
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://sourceware.org/git/lvm2.git
-  lvm2_version: 2_03_22
+  lvm2_version: 2_03_26
   lvm2_sha256: 4c5a6923bd1ace7ce04474608a84937ce053ba91b1ace9f0b0017268e732dc7c
   lvm2_sha512: 17cd24ceee8026481566824b688dafd03ec816201d5cb3549cb7fc8a36f4cdaa982faaef4dcd26debfe775dea5ffa2744798164314ea6dc99a84f8ccccfc33ff
 
@@ -167,7 +167,7 @@ vars:
   util_linux_sha512: ffe20b915a518a150401d429b0338bc7022190e4ca0ef91a6d9eea345db8c1e11ad01784163b8fcf978506f3f5cad473f29d5d4ef93a4c66a5ae0ebd9fb0c8f2
 
   # renovate: datasource=git-tags extractVersion=^v(?<version>.*)$ depName=git://git.kernel.org/pub/scm/fs/xfs/xfsprogs-dev.git
-  xfsprogs_version: 6.9.0
+  xfsprogs_version: 6.10.0
   xfsprogs_sha256: 975284783fb3fbc4e1ae640bd804d788e4237a86b07582acee86b6e48f6521b7
   xfsprogs_sha512: c597453759c400690810971f0b2daf0e4e22c74270b0f9800e2235da5e5c1383b59bc1176c5bba0023f74b623020fb51c62f0e98a74885cf3a8336e0b81c9023
 
