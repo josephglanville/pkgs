@@ -40,6 +40,7 @@ spec:
     - kernel
     - drbd-pkg
     - gasket-driver-pkg
+    - mellanox-ofed-pkg
     - nvidia-open-gpu-kernel-modules-lts-pkg
     - nvidia-open-gpu-kernel-modules-production-pkg
     - zfs-pkg
