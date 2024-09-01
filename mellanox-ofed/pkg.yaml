@@ -15,6 +15,10 @@ steps:
       - |
         tar -xzf mellanox_ofed.tgz --strip-components=1
 
+        ln -sv /toolchain/bin/rm /bin/rm
+        ln -sv /toolchain/bin/cp /bin/cp
+        ln -sv /toolchain/bin/mktemp /bin/mktemp
+
         cd SOURCES
         tar xf mlnx-ofed-kernel_24.07.OFED.24.07.0.6.1.1.orig.tar.gz
     build:
