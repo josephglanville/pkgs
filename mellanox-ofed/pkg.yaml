@@ -15,11 +15,18 @@ steps:
       - |
         tar -xzf mellanox_ofed.tgz --strip-components=1
 
+        ln -sv /toolchain/bin/cat /bin/cat
+        ln -sv /toolchain/bin/cp /bin/cp
+        ln -sv /toolchain/bin/grep /bin/grep
+        ln -sv /toolchain/bin/mkdir /bin/mkdir
+        ln -sv /toolchain/bin/mktemp /bin/mktemp
+        ln -sv /toolchain/bin/rm /bin/rm
+
         cd SOURCES
-        tar xf mlnx-ofed-kernel_5.9.orig.tar.gz
+        tar xf mlnx-ofed-kernel_24.07.OFED.24.07.0.6.1.1.orig.tar.gz
     build:
       - |
-        cd SOURCES/mlnx-ofed-kernel-5.9
+        cd SOURCES/mlnx-ofed-kernel-24.07.OFED.24.07.0.6.1.1
 
         ./configure --with-core-mod \
           --with-user_mad-mod \
@@ -32,10 +39,10 @@ steps:
           --kernel-sources=/src \
           -j $(nproc)
 
-        make kernel -j $(nproc)
+        make AM_DEFAULT_VERBOSITY=1 V=1 kernel -j $(nproc)
     install:
       - |
-        cd SOURCES/mlnx-ofed-kernel-5.9
+        cd SOURCES/mlnx-ofed-kernel-24.07.OFED.24.07.0.6.1.1
 
         mkdir -p /rootfs/lib/modules/$(cat /src/include/config/kernel.release)/
         cp /src/modules.order /rootfs/lib/modules/$(cat /src/include/config/kernel.release)/
