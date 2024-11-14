@@ -14,7 +14,9 @@ steps:
         cp -v /pkg/certs/* certs/
 
         # https://bugzilla.kernel.org/show_bug.cgi?id=218647
-        patch -p1 < /pkg/patches/btf_ids.patch
+        # patch -p1 < /pkg/patches/btf_ids.patch
+        # AXL P1 blade
+        patch -p1 < /pkg/patches/0002-drivers-clk-mvebu-ap806-1GHz-DDR-clock.patch
     build:
       {{ if .BUILD_ARG_KERNEL_TARGET }}
       - |

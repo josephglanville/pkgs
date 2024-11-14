@@ -5,16 +5,16 @@ dependencies:
   - image: '{{ .TOOLS_IMAGE }}'
 steps:
   - sources:
-      - url: https://cdn.kernel.org/pub/linux/kernel/v{{ regexReplaceAll ".\\d+\\.\\d+$" .linux_version "${1}" }}.x/linux-{{ .linux_version }}.tar.xz
-        destination: linux.tar.xz
-        sha256: "{{ .linux_sha256 }}"
-        sha512: "{{ .linux_sha512 }}"
+      - url: http://tp-hp002.spo-02.groq.com/sources-linux-5.4.x-SDK11.23.03.tar.bz2
+        destination: linux.tar.bz2
+        sha256: "23e31dfbfb589afc9c02a2c3abc20ee63db939999dcc46b3cf6143b51ac6eff9"
+        sha512: "f557a8a87fd8d5e5c35a682944b6dd61a6befc5883c0565e08a45ff2d47bfe5af64f370b3df48e9bb56998054908835e12eff9ef8ece19517f2788f4e8674f0d"
     env:
       ARCH: {{ if eq .ARCH "aarch64"}}arm64{{ else if eq .ARCH "x86_64" }}x86_64{{ else }}unsupported{{ end }}
     prepare:
       - |
-        tar -xJf linux.tar.xz --strip-components=1
-        rm linux.tar.xz
+        tar -xjf linux.tar.bz2 --strip-components=1
+        rm linux.tar.bz2
 
         mkdir /bin
         ln -sv /toolchain/bin/bash /bin/bash

@@ -1,0 +1,14 @@
+--- a/drivers/clk/mvebu/ap806-system-controller.c.orig	2023-03-28 19:53:14.000000000 -0700
++++ b/drivers/clk/mvebu/ap806-system-controller.c	2024-02-08 09:30:42.819547565 -0800
+@@ -119,6 +119,11 @@ static int ap807_get_sar_clocks(unsigned
+ 		*cpuclk_freq = 1600;
+ 		*dclk_freq = 1200;
+ 		break;
++	case 0x14:
++		/* configure for 1GHz DDR clock operation */
++		*cpuclk_freq = 1300;
++		*dclk_freq = 1000;
++		break;
+ 	default:
+ 		return -EINVAL;
+ 	}
